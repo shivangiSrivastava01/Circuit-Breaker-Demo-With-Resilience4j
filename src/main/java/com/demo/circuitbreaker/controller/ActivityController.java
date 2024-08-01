@@ -23,6 +23,11 @@ public class ActivityController {
     @GetMapping
     @CircuitBreaker(name = "randomActivity", fallbackMethod = "fallbackRandomActivity")
     public String getRandomActivity() {
+
+        // Create an API endpoint at http://localhost:8000/home in a separate application and run it on port 8000 to ensure it’s accessible.
+        // Once the successful scenario is tested, shut down the http://localhost:8000/home service.
+        // Test http://localhost:9090/activity API again; the fallbackMethod should be triggered as the service will be unavailable.
+
         String backToHomeAPI = "http://localhost:8000/home";
         ResponseEntity<String> responseEntity = restTemplate.getForEntity(backToHomeAPI, String.class);
         log.info("Activity received: {}", responseEntity.getBody());
