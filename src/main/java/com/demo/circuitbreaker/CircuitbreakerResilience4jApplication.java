@@ -1,4 +1,4 @@
-package com.techprimers.circuitbreaker;
+package com.demo.circuitbreaker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

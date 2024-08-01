@@ -1,7 +1,6 @@
-package com.techprimers.circuitbreaker.model;
+package com.demo.circuitbreaker.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Activity {
-    private String activity;
+    private String activityName;
     private String type;
     private String link;
     private String key;
